@@ -45,7 +45,7 @@ export function PosterDetail() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <img
-            src={poster.image}
+            src={`/favourite-posters${poster.image}`}
             alt={`${poster.company} - ${poster.title}`}
             className="poster-detail__image"
           />

@@ -9,7 +9,7 @@ import { SplashScreen } from './components/SplashScreen/SplashScreen';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/favourite-posters">
       <div className="app cursor-hover">
         <SplashScreen />
         <CustomCursor />

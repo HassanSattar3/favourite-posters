@@ -62,7 +62,7 @@ export function Gallery() {
               <Link to={`/poster/${poster.id}`} className="gallery__link">
                 <div className="gallery__image-container">
                   <img
-                    src={poster.image}
+                    src={`/favourite-posters${poster.image}`}
                     alt={`${poster.company} - ${poster.title}`}
                     className="gallery__image"
                   />
