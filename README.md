@@ -4,11 +4,12 @@ This project is for my grade 11 Business and Technologies Class
 
 ## Objectives
 - To select and showcase a favorite poster.
-- To utilize CSS, JavaScript, Shell, and HTML in creating the project.
+- To utilize CSS, JavaScript, Shell, HTML, and React in creating the project.
 
 ## Tools Used
 - **CSS**: Used for styling the posters.
 - **JavaScript**: Used for any interactive elements.
+- **React**: Used for building the user interface.
 - **Shell**: Used for any scripting and automation tasks.
 - **HTML**: Used for structuring the webpage.
 
@@ -17,3 +18,5 @@ This project is for my grade 11 Business and Technologies Class
 - **JavaScript**: 16,378 lines
 - **Shell**: 1,965 lines
 - **HTML**: 1,203 lines
+
+Feel free to explore the repository and see the different posters created by the students!
