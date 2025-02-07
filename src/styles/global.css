@@ -134,6 +134,9 @@ img {
 }
 
 @media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
   .cursor-hover {
     cursor: none;
   }

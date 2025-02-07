@@ -36,7 +36,7 @@ export function Gallery() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Iconic Tech Posters
+          My Favourite Posters
         </motion.h2>
         <motion.div
           className="gallery__subtitle"
@@ -44,7 +44,7 @@ export function Gallery() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <p>A curated collection of influential advertising in technology</p>
+          <p>My top 10 favourite posters!</p>
         </motion.div>
         
         <motion.div

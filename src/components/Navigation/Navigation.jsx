@@ -17,8 +17,8 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Tech Poster
-            <span className="navigation__logo-museum">Museum</span>
+            BTA Poster
+            <span className="navigation__logo-museum">Project</span>
           </motion.h1>
         </Link>
         <nav className="navigation__menu">
