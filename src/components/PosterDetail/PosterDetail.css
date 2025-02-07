@@ -1,0 +1,203 @@
+.poster-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-background);
+  z-index: var(--z-modal);
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+}
+
+.poster-detail__close {
+  position: fixed;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  font-size: var(--text-xl);
+  z-index: var(--z-top);
+  transition: all var(--transition-base) var(--ease-out);
+}
+
+.poster-detail__close:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.poster-detail__content {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.poster-detail__image-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--space-xxl) * 2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+
+.poster-detail__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-detail__info {
+  padding: var(--space-xl);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  height: fit-content;
+}
+
+.poster-detail__header {
+  margin-bottom: var(--space-xl);
+}
+
+.poster-detail__title {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-md);
+  background: linear-gradient(to right, var(--color-text-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.poster-detail__meta {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.poster-detail__company {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.poster-detail__year {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.poster-detail__year::before {
+  content: '•';
+  margin-right: var(--space-md);
+  color: var(--color-text-tertiary);
+}
+
+.poster-detail__description {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+  font-size: var(--text-lg);
+}
+
+.poster-detail__navigation {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-lg);
+}
+
+.poster-detail__nav-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base) var(--ease-out);
+  position: relative;
+}
+
+.poster-detail__nav-link:hover {
+  color: var(--color-accent);
+}
+
+.poster-detail__nav-link--prev::before,
+.poster-detail__nav-link--next::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--text-lg);
+  transition: transform var(--transition-base) var(--ease-out);
+}
+
+.poster-detail__nav-link--prev::before {
+  content: '←';
+  left: -20px;
+}
+
+.poster-detail__nav-link--next::after {
+  content: '→';
+  right: -20px;
+}
+
+.poster-detail__nav-link--prev:hover::before {
+  transform: translate(-5px, -50%);
+}
+
+.poster-detail__nav-link--next:hover::after {
+  transform: translate(5px, -50%);
+}
+
+@media (max-width: 1024px) {
+  .poster-detail__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--container-padding);
+  }
+
+  .poster-detail__image-container {
+    height: 50vh;
+  }
+
+  .poster-detail__info {
+    padding: var(--space-lg);
+  }
+
+  .poster-detail__title {
+    font-size: var(--text-3xl);
+  }
+
+  .poster-detail__description {
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .poster-detail__close {
+    top: var(--space-md);
+    right: var(--space-md);
+    width: 32px;
+    height: 32px;
+    font-size: var(--text-lg);
+  }
+
+  .poster-detail__content {
+    padding: var(--space-lg) var(--container-padding);
+  }
+
+  .poster-detail__image-container {
+    height: 40vh;
+  }
+}
